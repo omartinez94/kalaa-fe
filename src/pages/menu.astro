@@ -1,0 +1,112 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import menuDataImport from "../data/menu.json";
+import type { MenuData } from "../types/menu";
+
+const menuData = menuDataImport as MenuData;
+
+const categoryNames: Record<string, string> = {
+	bebidas: "Bebidas",
+	entradas: "Entradas",
+	principales: "Platos Principales",
+	postres: "Postres",
+};
+---
+
+<Layout title="Menu">
+	<Header />
+	<!-- Header -->
+	<div class="text-center mb-20">
+		<h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Menú 🍔</h1>
+		<p class="text-xl text-gray-300">
+			Disfruta de nuestras deliciosas opciones
+		</p>
+	</div>
+
+	<div class="columns-1 lg:columns-2 gap-8 [column-fill:balance]">
+		{
+			Object.entries(categoryNames).map(([key, title]) => (
+				<section class="break-inside-avoid mb-12">
+					<h2 class="text-3xl font-bold headline mb-6 border-b-2 border-amber-400 pb-2">
+						{title}
+					</h2>
+					<div class="columns-1 sm:columns-2 gap-4 [column-fill:balance] mt-4">
+						{menuData[key as keyof typeof menuData].map((item) => {
+							const ItemContent = (
+								<div class="glass rounded-xl overflow-hidden hover:bg-white/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer border border-transparent hover:border-amber-400/30 h-full mb-4 break-inside-avoid group">
+									{item.imagen && (
+										<div class="relative h-48 w-full overflow-hidden">
+											<img
+												src={item.imagen}
+												alt={item.nombre}
+												class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+											/>
+											<div class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
+											<div class="absolute bottom-3 left-4">
+												<span class="text-3xl drop-shadow-lg">
+													{item.emoji}
+												</span>
+											</div>
+										</div>
+									)}
+									<div class="p-6">
+										<div class="flex justify-between items-start mb-2 gap-4">
+											<h3 class="text-xl font-semibold text-white flex items-center gap-2 group-hover:text-amber-400 transition-colors">
+												{!item.imagen && (
+													<span>{item.emoji}</span>
+												)}
+												<span>{item.nombre}</span>
+												{item.slug && (
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="16"
+														height="16"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity"
+													>
+														<path d="M5 12h14m-7-7 7 7-7 7" />
+													</svg>
+												)}
+											</h3>
+											<span class="text-amber-400 font-bold whitespace-nowrap">
+												${item.precio.toFixed(2)}
+											</span>
+										</div>
+										<p class="text-gray-300">
+											{item.descripcion}
+										</p>
+									</div>
+								</div>
+							);
+
+							return item.slug ? (
+								<a
+									href={`/productos/${item.slug}`}
+									class="block text-inherit no-underline group"
+								>
+									{ItemContent}
+								</a>
+							) : (
+								<div class="group">{ItemContent}</div>
+							);
+						})}
+					</div>
+				</section>
+			))
+		}
+	</div>
+
+	<!-- Footer con nota -->
+	<div class="text-center py-8 border-t border-gray-600">
+		<p class="text-gray-300 mb-2">¿Preguntas sobre ingredientes?</p>
+		<p class="text-amber-400 font-semibold">
+			Consulta con nuestro personal
+		</p>
+	</div>
+</Layout>

@@ -1,0 +1,140 @@
+---
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+
+export interface Props {
+	title: string;
+}
+
+const { title = "Inicio" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Kalaa - {title}</title>
+		<ClientRouter />
+		<!-- Enable client-side routing for smooth transitions -->
+	</head>
+	<body class="flex flex-col h-screen w-screen items-center justify-between">
+		<div
+			class="firepit-container container mx-auto px-4 flex-1 flex flex-col w-full"
+		>
+			<slot />
+		</div>
+		<Footer />
+		<div class="canvas-container">
+			<canvas id="fire-canvas"></canvas>
+		</div>
+		<style is:global>
+			* {
+				box-sizing: border-box;
+			}
+
+			html {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				width: 100%;
+			}
+
+			body {
+				background-color: #0a0a0a;
+				width: 100%;
+				display: flex;
+				position: relative;
+				isolation: isolate;
+			}
+
+			.headline {
+				font-size: 3.5rem;
+				font-weight: 900;
+				margin-bottom: 1rem;
+				background: linear-gradient(
+					to right,
+					#f5a742,
+					#e85a19,
+					#ff3e00
+				);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				opacity: 0;
+				transform: translateY(20px);
+				animation: fadeUp 1.5s ease forwards 0.5s;
+				position: relative;
+			}
+
+			.subheadline {
+				font-size: 1.2rem;
+				font-weight: 300;
+				letter-spacing: 1px;
+				max-width: 80%;
+				margin-bottom: 2rem;
+				opacity: 0;
+				transform: translateY(20px);
+				animation: fadeUp 1.5s ease forwards 0.8s;
+				position: relative;
+			}
+
+			.glass {
+				background: rgba(255, 186, 0, 0.05);
+				border-radius: 15px;
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+				backdrop-filter: blur(8.9px);
+				-webkit-backdrop-filter: blur(8.9px);
+			}
+
+			@keyframes fadeUp {
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.canvas-container {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+				z-index: -1;
+				pointer-events: none;
+			}
+
+			canvas {
+				width: 100%;
+				height: 100%;
+			}
+
+			/* Responsive adjustments */
+			@media (max-width: 700px) {
+				.headline {
+					font-size: 2.5rem;
+				}
+
+				.subheadline {
+					font-size: 1rem;
+					max-width: 90%;
+				}
+			}
+
+			@media (max-width: 500px) {
+				.headline {
+					font-size: 2rem;
+					margin-bottom: 0;
+				}
+
+				.subheadline {
+					font-size: 0.9rem;
+				}
+			}
+		</style>
+		<script src="/src/scripts/particles.js" is:inline></script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+---
+import logo128 from "../assets/logo/logo-128.png";
+import logo256 from "../assets/logo/logo-256.png";
+import logo512 from "../assets/logo/logo-512.png";
+
+interface Props {
+  isBigHeader?: boolean;
+}
+
+const { isBigHeader = false } = Astro.props;
+---
+
+<header class="w-full pt-8">
+  <a href="/">
+    <picture class="mb-8 flex flex-col items-center">
+      <source srcset={logo512.src} media="(min-width: 512px)" />
+      <source srcset={logo256.src} media="(min-width: 256px)" />
+      <img
+        transition:name="main-logo"
+        src={logo128.src}
+        alt="Kalaa Logo"
+        class:list={["pointer-events-none", { "size-2/5": !isBigHeader }]}
+      />
+    </picture>
+  </a>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

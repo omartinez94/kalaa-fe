@@ -1,0 +1,148 @@
+{
+  "entradas": [
+    {
+      "nombre": "Quesadillas",
+      "emoji": "🧀",
+      "slug": "quesadillas",
+      "precio": 6.00,
+      "descripcion": "Quesadillas de queso fundido, flores de calabaza o champiñones",
+      "imagen": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&w=800&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1618413867375-30fd6a100693?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1542310503-5169970868f0?q=80&w=800&auto=format&fit=crop"
+      ]
+    },
+    {
+      "nombre": "Guacamole con Totopos",
+      "emoji": "🥑",
+      "slug": "guacamole-con-totopos",
+      "precio": 7.50,
+      "descripcion": "Guacamole preparado al momento con totopos caseros"
+    },
+    {
+      "nombre": "Ceviche de Camarón",
+      "emoji": "🦐",
+      "slug": "ceviche-de-camaron",
+      "precio": 9.00,
+      "descripcion": "Camarones frescos marinados con limón, cebolla y cilantro"
+    },
+    {
+      "nombre": "Nachos Kalaa",
+      "emoji": "🌽",
+      "slug": "nachos-kalaa",
+      "precio": 8.50,
+      "descripcion": "Totopos con queso fundido, jalapeños, carne y sour cream",
+      "imagen": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?q=80&w=800&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=800&auto=format&fit=crop"
+      ]
+    }
+  ],
+  "principales": [
+    {
+      "nombre": "Chilaquiles Rojos",
+      "emoji": "🌶️",
+      "slug": "chilaquiles-rojos",
+      "precio": 10.00,
+      "descripcion": "Totopos en salsa roja con pollo, queso, cebolla y cilantro",
+      "imagen": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=800&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?q=80&w=800&auto=format&fit=crop"
+      ]
+    },
+    {
+      "nombre": "Chiles Rellenos",
+      "emoji": "🫑",
+      "slug": "chiles-rellenos",
+      "precio": 11.50,
+      "descripcion": "Chiles poblanos rellenos de queso en salsa de jitomate",
+      "imagen": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "nombre": "Mole Rojo con Pollo",
+      "slug": "mole-rojo-con-pollo",
+      "precio": 12.00,
+      "descripcion": "Receta tradicional con salsa de mole rojo, arroz y tortillas",
+      "imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "nombre": "Enchiladas Verdes",
+      "slug": "enchiladas-verdes",
+      "precio": 10.50,
+      "descripcion": "Enchiladas de pollo en salsa verde, con queso y crema",
+      "imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "nombre": "Pescado a la Veracruzana",
+      "emoji": "🐟",
+      "slug": "pescado-a-la-veracruzana",
+      "precio": 14.50,
+      "descripcion": "Pescado blanco con salsa de jitomate, cebolla y aceitunas",
+      "imagen": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "nombre": "Tacos al Pastor",
+      "emoji": "🌮",
+      "slug": "tacos-al-pastor",
+      "precio": 11.00,
+      "descripcion": "Carne marinada en achiote, piña y especias, 3 tacos",
+      "imagen": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1593001874117-063994276166?q=80&w=800&auto=format&fit=crop"
+      ]
+    }
+  ],
+  "bebidas": [
+    {
+      "nombre": "Agua Fresca de Jamaica",
+      "precio": 3.50,
+      "descripcion": "Bebida tradicional refrescante con sabor tart y natural"
+    },
+    {
+      "nombre": "Horchata Casera",
+      "precio": 4.00,
+      "descripcion": "Horchata premium con arroz, almendra y canela"
+    },
+    {
+      "nombre": "Refresco Natural",
+      "precio": 3.00,
+      "descripcion": "Bebidas naturales - piña, limón, sandía o tamarindo"
+    },
+    {
+      "nombre": "Café Espresso",
+      "emoji": "☕",
+      "precio": 2.50,
+      "descripcion": "Café artesanal de grano seleccionado"
+    }
+  ],
+  "postres": [
+    {
+      "nombre": "Churros con Chocolate",
+      "slug": "churros-con-chocolate",
+      "precio": 6.50,
+      "descripcion": "Churros crujientes acompañados de chocolate caliente",
+      "imagen": "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "nombre": "Flan Casero",
+      "slug": "flan-casero",
+      "precio": 5.00,
+      "descripcion": "Flan tradicional con caramelo derretido"
+    },
+    {
+      "nombre": "Arroz con Leche",
+      "emoji": "🍚",
+      "slug": "arroz-con-leche",
+      "precio": 4.50,
+      "descripcion": "Arroz con leche cremoso con canela"
+    },
+    {
+      "nombre": "Tres Leches",
+      "emoji": "🍰",
+      "slug": "tres-leches",
+      "precio": 6.00,
+      "descripcion": "Pastel esponjoso bañado en tres tipos de leche"
+    }
+  ]
+}

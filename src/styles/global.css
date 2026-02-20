@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Blackboard Background */
+.blackboard {
+	background-color: #1f1f1f;
+	background-image: 
+		/* Marcas de borrador circulares */
+		radial-gradient(circle 400px at 15% 25%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+		radial-gradient(circle 300px at 75% 60%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+		radial-gradient(circle 250px at 85% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+		radial-gradient(circle 350px at 20% 80%, rgba(255, 255, 255, 0.13) 0%, transparent 50%),
+		/* Textura de polvo de tiza dispersado */
+		repeating-linear-gradient(
+			45deg,
+			transparent,
+			transparent 35px,
+			rgba(255, 255, 255, 0.03) 35px,
+			rgba(255, 255, 255, 0.03) 70px
+		),
+		repeating-linear-gradient(
+			-45deg,
+			transparent,
+			transparent 35px,
+			rgba(255, 255, 255, 0.02) 35px,
+			rgba(255, 255, 255, 0.02) 70px
+		),
+		/* Irregularidades sutiles */
+		radial-gradient(ellipse 600px 400px at 45% 35%, rgba(255, 255, 255, 0.08) 0%, transparent 60%),
+		radial-gradient(ellipse 500px 300px at 65% 75%, rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+	background-size: 
+		100% 100%,
+		100% 100%,
+		100% 100%,
+		100% 100%,
+		100% 100%,
+		100% 100%,
+		100% 100%,
+		100% 100%;
+	position: relative;
+}
