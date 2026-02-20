@@ -15,8 +15,12 @@ const { title = "Inicio" } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href={`${import.meta.env.BASE_URL}/favicon.svg`}
+		/>
+		<link rel="icon" href={`${import.meta.env.BASE_URL}/favicon.ico`} />
 		<meta name="generator" content={Astro.generator} />
 		<title>Kalaa - {title}</title>
 		<ClientRouter />
@@ -135,6 +139,6 @@ const { title = "Inicio" } = Astro.props;
 				}
 			}
 		</style>
-		<script src="/src/scripts/particles.js" is:inline></script>
+		<script src="../scripts/particles.js"></script>
 	</body>
 </html>

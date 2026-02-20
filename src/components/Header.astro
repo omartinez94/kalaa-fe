@@ -11,7 +11,7 @@ const { isBigHeader = false } = Astro.props;
 ---
 
 <header class="w-full pt-8">
-  <a href="/">
+  <a href={`${import.meta.env.BASE_URL}/`}>
     <picture class="mb-8 flex flex-col items-center">
       <source srcset={logo512.src} media="(min-width: 512px)" />
       <source srcset={logo256.src} media="(min-width: 256px)" />

@@ -15,12 +15,12 @@ import Header from "./Header.astro";
 	</p>
 	<div class="flex flex-col md:flex-row gap-6 md:gap-12 mt-4">
 		<a
-			href="/menu"
+			href={`${import.meta.env.BASE_URL}/menu`}
 			class="headline cursor-pointer hover:text-amber-400 transition text-center"
 			transition:name="">Menu</a
 		>
 		<a
-			href="/promos"
+			href={`${import.meta.env.BASE_URL}/promos`}
 			class="headline cursor-pointer hover:text-amber-400 transition text-center"
 			>Promociones</a
 		>

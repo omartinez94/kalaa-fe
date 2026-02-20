@@ -87,7 +87,9 @@ const categoryNames: Record<string, string> = {
 
 							return item.slug ? (
 								<a
-									href={`/productos/${item.slug}`}
+									href={`${
+										import.meta.env.BASE_URL
+									}/productos/${item.slug}`}
 									class="block text-inherit no-underline group"
 								>
 									{ItemContent}
